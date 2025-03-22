@@ -1,13 +1,31 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite';
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss() ],
-  //publicDir: 'public',
-  //base: process.env.VITE_BASE_PATH || '/Movies_website',
+  plugins: [react(), tailwindcss()],
+  build: {
+    rollupOptions: {
+      external: ['appwrite']
+    }
+  }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+//publicDir: 'public',
+  //base: process.env.VITE_BASE_PATH || '/Movies_website',
+// })
 
 //
 // import { defineConfig } from 'vite'
